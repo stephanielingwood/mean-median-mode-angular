@@ -11,12 +11,12 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     jshint: {
-      all: ['app/**/*.js', 'test/**/*.js', '*.js', '!app/bundle.js', '!test/test_bundle.js']
+      all: ['app/**/*.js', 'test/**/*.js', '*.js', 'lib/**/*.js', '!app/bundle.js', '!test/test_bundle.js']
     },
 
     jscs: {
       all: {
-        src: ['app/**/*.js', 'server.js', 'test/**/*.js', '!app/bundle.js', '!test/test_bundle.js', 'Gruntfile.js'],
+        src: ['app/**/*.js', '*.js', 'test/**/*.js', 'lib/**/*.js', '!app/bundle.js', '!test/test_bundle.js'],
         options: {
             config: '.jscsrc'
         }
