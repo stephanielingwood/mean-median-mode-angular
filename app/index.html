@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset='UTF-8'>
+  <title></title>
+</head>
+
+<body>
+  <h1>Mean, Median, and Mode</h1>
+  <h2>Enter a sequence of numbers, separated by commas, to find the mean, median, and mode.</h2>
+
+  <div data-ng-app="mmmApp">
+
+    <div data-ng-controller="mmmCtrl">
+      <br>
+
+      <h3>I Want the Mean:</h3>
+      <input type="text" data-ng-model="mmm.meanNums" data-ng-change="findMean()">
+      <p>Mean: {{mean}}</p>
+      <br>
+      <br>
+
+      <h3>I Want the Median:</h3>
+      <input type="text" data-ng-model="mmm.medianNums" data-ng-change="findMedian()">
+      <p>Median: {{median}}</p>
+      <br>
+      <br>
+
+      <h3>I Want the Mode:</h3>
+      <input type="text" data-ng-model="mmm.modeNums" data-ng-change="findMode()">
+      <p>Mode: {{mode}}</p>
+    </div>
+
+  </div>
+
+  <script src="bundle.js"></script>
+</body>
+</html>
