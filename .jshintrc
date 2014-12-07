@@ -1,0 +1,27 @@
+{
+  "globals": {
+    "describe": false,
+    "it"         : false,
+    "to"         : false,
+    "ok"         : false,
+    "be"         : false,
+    "before"     : false,
+    "beforeEach" : false,
+    "after"      : false,
+    "afterEach"  : false,
+    "equal"      : false,
+    "expect"     : false,
+    "angular"    : false
+  },
+  "browserify": true,
+  "browser": true,
+  "jquery": true,
+  "node": true,
+  "indent": 2,
+  "globalstrict" : true,
+  "quotmark": true,
+  "trailing": true,
+  "undef": true,
+  "unused": false,
+  "-W079": false
+}
