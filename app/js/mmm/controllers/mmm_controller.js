@@ -2,50 +2,21 @@
 
 module.exports = function(app) {
 
-  app.controller('mmmCtrl', ['$scope', '$http', function($scope, $http) {
+  app.controller('mmmCtrl', ['$scope', 'mmmBackend', function($scope, mmmBackend) {
 
     $scope.findMean = function() {
-      $http({
-        method: 'POST',
-        url: '/mean',
-        data: {data: $scope.mmm.meanNums}
-      })
-      .success(function(data) {
-        $scope.mean = data.mean;
-      })
-      .error(function(data) {
-        console.log(data);
-      });
+      var string = $scope.mmm.meanNums;
+      $scope.mean = mmmBackend.mean(string);
     };
 
     $scope.findMedian = function() {
-      $http({
-        method: 'POST',
-        url: '/median',
-        data: {data: $scope.mmm.medianNums}
-      })
-      .success(function(data) {
-        $scope.median = data.median;
-      })
-      .error(function(data) {
-        console.log(data);
-      });
+      var string = $scope.mmm.medianNums;
+      $scope.median = mmmBackend.median(string);
     };
 
     $scope.findMode = function() {
-      $http({
-        method: 'POST',
-        url: '/mode',
-        data: {data: $scope.mmm.modeNums}
-      })
-      .success(function(data) {
-        $scope.mode = data.mode;
-      })
-      .error(function(data) {
-        console.log(data);
-      });
+      var string = $scope.mmm.modeNums;
+      $scope.mode = mmmBackend.mode(string);
     };
-
   }]);
-
 };
