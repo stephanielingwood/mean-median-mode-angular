@@ -1,4 +1,4 @@
-/*global describe, it, before, beforeEach, after, afterEach */
+'use strict';
 
 var chai = require('chai');
 var chaihttp = require('chai-http');

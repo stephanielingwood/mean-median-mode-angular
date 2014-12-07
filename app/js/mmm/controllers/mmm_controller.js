@@ -1,5 +1,3 @@
-/*jshint browserify: true*/
-/*global angular, console, mmm*/
 'use strict';
 
 module.exports = function(app) {
